@@ -1,0 +1,46 @@
+<!-- <table class="table table-striped">
+  <thead class="container">
+    <tr class="row">
+      <th scope="col" class="col-md-2">#</th>
+      <th scope="col" class="col-md-2">First</th>
+      <th scope="col" class="col-md-2">Last</th>
+      <th scope="col" class="col-md-2">Handle</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr class="row">
+      <td scope="row" class="col-md-2"></td>
+      <td class="col-md-2">  
+        <mat-form-field class="width">
+          <input matInput placeholder="Favorite food" value="Sushi">
+      </mat-form-field>
+    </td >
+      <td class="col-md-2">Otto</td>
+      <td class="col-md-2">@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td>Larry</td>
+      <td>the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table> -->
+
+<form [formGroup]="profileForm">
+  
+
+  <mat-checkbox formControlName="checkMe" indeterminate ="true">Check me</mat-checkbox>
+ <br>
+ <section *ngFor="let control of daysArray.controls; let i = index;">
+    <mat-checkbox [formControl]="control" (change)="getSelectedDaysValues()" >{{days[i]}}</mat-checkbox>
+ </section>
+ 
+
+</form>
